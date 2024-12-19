@@ -23,5 +23,5 @@ sprint_qa_report_data = {
 # Create DataFrame
 sprint_qa_report = pd.DataFrame(sprint_qa_report_data)
 # Save to Excel
-output_file_path = "/mnt/data/Sprint_QA_Report.xlsx"
+output_file_path = "./Sprint_QA_Report.xlsx"
 sprint_qa_report.to_excel(output_file_path, index=False, sheet_name="Sprint QA Report")
