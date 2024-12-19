@@ -1,0 +1,26 @@
+<TestPlan>
+  <ThreadGroup>
+    <NumberOfThreads>100</NumberOfThreads>
+    <RampUpTime>120</RampUpTime>
+    <Duration>600</Duration>
+  </ThreadGroup>
+  <Sampler>
+    <HTTPSampler>
+      <name>Login API</name>
+      <url>https://api.scotiabank.com/auth/login</url>
+      <method>POST</method>
+      <body>{"username": "test_user", "password": "test_password"}</body>
+    </HTTPSampler>
+    <HTTPSampler>
+      <name>Trade Execution API</name>
+      <url>https://api.scotiabank.com/trade/execute</url>
+      <method>POST</method>
+      <body>{"type": "crypto", "asset": "XRP", "amount": 200}</body>
+    </HTTPSampler>
+  </Sampler>
+  <Listeners>
+    <GraphResults />
+    <AggregateReport />
+    <ViewResultsInTable />
+  </Listeners>
+</TestPlan>
