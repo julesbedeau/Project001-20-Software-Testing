@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ITrade Automation Suite">
+    <test name="Login Tests">
+        <classes>
+            <class name="com.itrade.tests.LoginTests"/>
+        </classes>
+    </test>
+    <test name="Funds and Trading Tests">
+        <classes>
+            <class name="com.itrade.tests.FundsTests"/>
+            <class name="com.itrade.tests.TradingTests"/>
+        </classes>
+    </test>
+    <test name="Logout Tests">
+        <classes>
+            <class name="com.itrade.tests.LogoutTests"/>
+        </classes>
+    </test>
+</suite>
